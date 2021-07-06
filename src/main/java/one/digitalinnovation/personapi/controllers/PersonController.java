@@ -1,4 +1,4 @@
-package one.digitalinnovation.personapi.controller;
+package one.digitalinnovation.personapi.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class PersonController {
     
     @GetMapping
-    public String getFirstTest() {
+    public String getFirstTest() {        
         return "API first test!";
     }
 }
