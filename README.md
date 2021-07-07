@@ -6,8 +6,9 @@
 * Spring Boot DevTools
 * Lombok
 * MapStruct
-* Spring Data JPA
-* Spring Web
+* Spring Starter Data JPA
+* Spring Starter Validation
+* Spring Starter Web
 * Spring Boot Actuator
 * H2 Database
 
