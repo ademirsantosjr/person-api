@@ -1,7 +1,6 @@
 package one.digitalinnovation.personapi.service;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,10 +29,7 @@ public class PersonService {
         Person personToSave = personMapper.toModel(personDTO);
         
         Person savedPerson = personRepository.save(personToSave);
-        return MessageResponseDTO
-                    .builder()
-                    .message("Created person with ID: " + savedPerson.getId())
-                    .build();
+        return createMessageResponse(savedPerson.getId(), "Updated person with ID: ");
     }
 
     public List<PersonDTO> listAll() {
@@ -53,8 +49,24 @@ public class PersonService {
         personRepository.deleteById(id);               
     }
 
-    public Person verifyIfExists(Long id ) throws PersonNotFoundException {
+    public MessageResponseDTO updateById(Long id, PersonDTO personDTO) throws PersonNotFoundException{        
+        verifyIfExists(id);
+
+        Person personToUpdate = personMapper.toModel(personDTO);
+        
+        Person updatedPerson = personRepository.save(personToUpdate);
+        return createMessageResponse(updatedPerson.getId(), "Updated person with ID: ");
+    }
+
+    private Person verifyIfExists(Long id ) throws PersonNotFoundException {
         return personRepository.findById(id)
                             .orElseThrow(() -> new PersonNotFoundException(id));
+    } 
+    
+    private MessageResponseDTO createMessageResponse(Long id, String message) {
+        return MessageResponseDTO
+                .builder()
+                .message(message + id)
+                .build();
     }
 }
