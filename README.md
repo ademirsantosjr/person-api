@@ -20,6 +20,7 @@
 ## Dependências
 * Spring Boot DevTools
 * Lombok
+* MapStruct
 * Spring Data JPA
 * Spring Web
 * Spring Boot Actuator
