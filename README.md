@@ -1,11 +1,12 @@
-# API com Spring Boot
-## Versão java
+# Gerenciamento de pessoas em API Rest com Spring Boot
+## Linguagem
 * Java 11
 
 ## Ferramentas
 * Spring Initialzr
 * Maven
 * VSCode
+* Postman
 
 ### Plugins VSCode
 * Debugger for Java
