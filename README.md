@@ -2,6 +2,15 @@
 ## Linguagem
 * Java 11
 
+## Dependências
+* Spring Boot DevTools
+* Lombok
+* MapStruct
+* Spring Data JPA
+* Spring Web
+* Spring Boot Actuator
+* H2 Database
+
 ## Ferramentas
 * Spring Initialzr
 * Maven
@@ -16,12 +25,4 @@
 * Spring Boot Dashboard
 * Spring Boot Tools
 * Lombok Annotations
-
-## Dependências
-* Spring Boot DevTools
-* Lombok
-* MapStruct
-* Spring Data JPA
-* Spring Web
-* Spring Boot Actuator
-* H2 Database
+* Java Test Runner
