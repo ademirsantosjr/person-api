@@ -23,13 +23,13 @@ import one.digitalinnovation.personapi.exception.PersonNotFoundException;
 import one.digitalinnovation.personapi.service.PersonService;
 
 @RestController
-@RequestMapping("/api/v1/person")
+@RequestMapping("/api/v1/people")
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 public class PersonController {
 
     private PersonService personService;    
 
-    @GetMapping("/all")
+    @GetMapping
     public List<PersonDTO> listAll() {
         return personService.listAll();
     }
