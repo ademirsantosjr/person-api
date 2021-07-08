@@ -39,18 +39,18 @@ public class PersonController {
         return personService.findById(id);
     }
 
-    @PostMapping
+    @PostMapping("/save")
     @ResponseStatus(HttpStatus.CREATED)
     public MessageResponseDTO createPerson(@RequestBody @Valid PersonDTO personDTO) {      
         return personService.createPerson(personDTO);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/update/{id}")
     public MessageResponseDTO updateById(@PathVariable Long id, @RequestBody PersonDTO personDTO) throws PersonNotFoundException{
         return personService.updateById(id, personDTO);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteById(@PathVariable Long id) throws PersonNotFoundException{
         personService.deleteById(id);
