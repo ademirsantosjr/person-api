@@ -27,15 +27,9 @@ import one.digitalinnovation.personapi.service.PersonService;
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 public class PersonController {
 
-    private PersonService personService;
+    private PersonService personService;    
 
-    @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
-    public MessageResponseDTO createPerson(@RequestBody @Valid PersonDTO personDTO) {      
-        return personService.createPerson(personDTO);
-    }
-
-    @GetMapping
+    @GetMapping("/all")
     public List<PersonDTO> listAll() {
         return personService.listAll();
     }
@@ -43,6 +37,12 @@ public class PersonController {
     @GetMapping("/{id}")
     public PersonDTO findById(@PathVariable Long id) throws PersonNotFoundException{
         return personService.findById(id);
+    }
+
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public MessageResponseDTO createPerson(@RequestBody @Valid PersonDTO personDTO) {      
+        return personService.createPerson(personDTO);
     }
 
     @PutMapping("/{id}")

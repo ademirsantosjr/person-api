@@ -1,6 +1,9 @@
 # Gerenciamento de pessoas em API Rest com Spring Boot
-## Linguagem
+## Ferramentas
 * Java 11
+* Maven
+* Postman
+* VSCode
 
 ## Dependências
 * Spring Boot DevTools
@@ -11,12 +14,6 @@
 * Spring Boot Starter Web
 * Spring Boot Actuator
 * H2 Database
-
-## Ferramentas
-* Spring Initialzr
-* Maven
-* VSCode
-* Postman
 
 ### Plugins VSCode
 * Debugger for Java

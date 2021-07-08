@@ -7,6 +7,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,6 +20,7 @@ import one.digitalinnovation.personapi.enums.PhoneType;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "PHONES")
 public class Phone {
     
     @Id
